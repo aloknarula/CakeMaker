@@ -58,3 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+/CakeMakerSource/.vsconfig
+/CakeMakerSource/Assembly-CSharp.csproj
+/CakeMakerSource/Assembly-CSharp-Editor.csproj
+/CakeMakerSource/CakeMaker.sln
+/CakeMakerSource/obj
+/CakeMakerSource/Library
+/CakeMakerSource/Logs
