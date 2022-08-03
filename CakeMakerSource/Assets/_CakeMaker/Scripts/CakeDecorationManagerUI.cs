@@ -9,6 +9,7 @@ public class CakeDecorationManagerUI : MonoBehaviour
     public CakeDecorationManager m_decoManager;
     public GameObject m_rotationPanel;
     public GameObject m_colorPanel;
+    public FlexibleColorPicker m_colorPicker;
     // Protected //
     // Private //
     // Access //
@@ -83,6 +84,10 @@ public class CakeDecorationManagerUI : MonoBehaviour
             
             if(m_decoManager.m_selectedCheez.m_canChangeColor)
             {
+                if(m_colorPanel.activeSelf == false)
+                {
+                    m_colorPicker.SetColor(m_decoManager.m_selectedCheez.m_mainMaterial.color);
+                }
                 m_colorPanel.SetActive(true);
             }
             else

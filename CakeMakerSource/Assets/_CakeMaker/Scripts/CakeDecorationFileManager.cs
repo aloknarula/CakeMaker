@@ -52,6 +52,10 @@ public class CakeDecorationFileManager : MonoBehaviour
     {
         FileStream file = File.Open(Application.persistentDataPath + "\\" + m_fileName, FileMode.Open);
 
+        for(int i=0; i<m_thingsToSave.Count; i++)
+        {
+            Destroy(m_thingsToSave[i].gameObject);
+        }
         m_thingsToSave.Clear();
 
         BinaryReader reader = new BinaryReader(file);
