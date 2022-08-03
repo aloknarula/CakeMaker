@@ -31,7 +31,7 @@ public class CakeDecorationManager : MonoBehaviour
         eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-        Debug.Log(results.Count);
+        //Debug.Log(results.Count);
 
         for (int index = 0; index < results.Count; index++)
         {

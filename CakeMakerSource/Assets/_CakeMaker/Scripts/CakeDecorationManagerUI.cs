@@ -18,6 +18,21 @@ public class CakeDecorationManagerUI : MonoBehaviour
         
     }
 
+    public void RotationX(float by)
+    {
+        if (m_decoManager.m_selectedCheez == null)
+        {
+            return;
+        }
+
+        if(m_decoManager.m_selectedCheez.m_canRotate == false)
+        {
+            return;
+        }
+
+        m_decoManager.m_selectedCheez.transform.rotation = Quaternion.AngleAxis(by*360f, Vector3.right);
+    }
+
     public void RotationY(float by)
     {
         if (m_decoManager.m_selectedCheez == null)
@@ -30,9 +45,7 @@ public class CakeDecorationManagerUI : MonoBehaviour
             return;
         }
 
-        m_decoManager.m_selectedCheez.transform.rotation *= Quaternion.AngleAxis(by, Vector3.up);
-            //.Rotate(m_decoManager.m_selectedCheez.transform.up, by);
-
+        m_decoManager.m_selectedCheez.transform.rotation = Quaternion.AngleAxis(by*360f, Vector3.up);
     }
 
     public void ColorChanged(Color changedTo)
