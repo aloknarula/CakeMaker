@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8755906c53eaa4e448c44b864c5532e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: 1
   m_selectionMesh: {fileID: 6539830376139870042}
   m_canChangeColor: 0
   m_canRotate: 1

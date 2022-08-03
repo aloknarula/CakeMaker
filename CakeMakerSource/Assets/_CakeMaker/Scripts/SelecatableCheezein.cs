@@ -6,6 +6,7 @@ public class SelecatableCheezein : MonoBehaviour
 {
     // Public //
     [Header("Selectable Variables")]
+    public Type m_type;
     public GameObject m_selectionMesh;
     public bool m_canChangeColor;
     public bool m_canRotate;
@@ -14,6 +15,20 @@ public class SelecatableCheezein : MonoBehaviour
     // Protected //
     // Private //
     // Access //
+    public enum Type
+    {
+        Cake,
+        Cherry,
+        ChocoChips,
+        CreamBalls01,
+        CreamBalls02,
+        CreamBalls03,
+        Sprinkles,
+        Candles,
+        Flower01,
+        Flower02,
+        Flower03
+    }
 
     public virtual void Start()
     {

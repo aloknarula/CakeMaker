@@ -12,13 +12,4 @@ public class ChipkneWaleCheezein : SelecatableCheezein
     // Private //
     // Access //
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

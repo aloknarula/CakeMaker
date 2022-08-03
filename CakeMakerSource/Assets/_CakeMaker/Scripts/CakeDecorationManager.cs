@@ -31,14 +31,17 @@ public class CakeDecorationManager : MonoBehaviour
         eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-        //Debug.Log(results.Count);
-
+        string log = "";
         for (int index = 0; index < results.Count; index++)
         {
             RaycastResult curRaysastResult = results[index];
+            log += curRaysastResult.gameObject.layer;
             if (curRaysastResult.gameObject.layer == 5)
+            {
                 return true;
+            }
         }
+        //Debug.Log(log + results.Count);
 
         return false;
     }
