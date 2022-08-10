@@ -6,14 +6,14 @@ public class DecorationPicker : MonoBehaviour
 {
     public CakeDecorationFileManager m_fileManager;
 
-    public GameObject[] m_decorations;
+    //public GameObject[] m_decorations;
     public Transform m_decoSpawnPosition;
     public float m_spawnRadius = 5f;
 
 
     public void CreateDecoration(int index)
     {
-        if(index < 0 || index >= m_decorations.Length)
+        if(index < 0 || index >= m_fileManager.m_prefabs.Length)
         {
             Debug.LogError("trying to spawn decoration which does not exist " + index);
             return;
@@ -23,7 +23,7 @@ public class DecorationPicker : MonoBehaviour
         Vector3 rndVec = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f));
         spawnPosForThisDecoItem += rndVec * m_spawnRadius;
 
-        GameObject decoGO = Instantiate(m_decorations[index], spawnPosForThisDecoItem, Quaternion.identity);
+        GameObject decoGO = Instantiate(m_fileManager.m_prefabs[index], spawnPosForThisDecoItem, Quaternion.identity);
         decoGO.SetActive(true);
 
         ChipkneWaleCheezein cheez = decoGO.GetComponent<ChipkneWaleCheezein>();
