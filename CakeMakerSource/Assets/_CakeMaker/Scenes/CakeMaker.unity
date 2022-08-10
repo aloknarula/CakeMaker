@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 67181361}
   - component: {fileID: 67181360}
   - component: {fileID: 67181359}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: 'Candlebutton '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,14 +207,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CherryInstantiate, Assembly-CSharp
-        m_MethodName: MakeCherry
-        m_Mode: 1
+      - m_Target: {fileID: 1609950315}
+        m_TargetAssemblyTypeName: DecorationPicker, Assembly-CSharp
+        m_MethodName: CreateDecoration
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1551,7 +1551,7 @@ GameObject:
   - component: {fileID: 689638644}
   - component: {fileID: 689638646}
   - component: {fileID: 689638645}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3309,6 +3309,7 @@ MonoBehaviour:
   - {fileID: 6563174382370881965, guid: dd1d2e76eaee77a4382b79a3594346d2, type: 3}
   - {fileID: 1767203097691544111, guid: 1d0cad6a87108194bb03287f8348b885, type: 3}
   - {fileID: 1821309702790643272, guid: 60e4a08f17cdf724e8a08826459f7936, type: 3}
+  - {fileID: 3774280030435024288, guid: 9499b9bc18b058d40b9fb0e57f940dea, type: 3}
   m_parent: {fileID: 610565978}
 --- !u!4 &1122450026
 Transform:

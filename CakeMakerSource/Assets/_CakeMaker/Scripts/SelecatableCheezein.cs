@@ -22,8 +22,8 @@ public class SelecatableCheezein : MonoBehaviour
         Cherry,
         Cream,
         Flower,
+        Candle,
         Sprinkles,
-        Candles,
         Flower01,
         Flower02,
         Flower03
