@@ -43,6 +43,11 @@ public class CakeDecorationFileManager : MonoBehaviour
             binWriter.Write(saveMe.m_mainMaterial.color.r);
             binWriter.Write(saveMe.m_mainMaterial.color.g);
             binWriter.Write(saveMe.m_mainMaterial.color.b);
+
+            binWriter.Write(saveMe.transform.localScale.x);
+            binWriter.Write(saveMe.transform.localScale.y);
+            binWriter.Write(saveMe.transform.localScale.z);
+
         }
 
         file.Close();
@@ -68,13 +73,16 @@ public class CakeDecorationFileManager : MonoBehaviour
 
             Vector3 pos = new Vector3(reader.ReadSingle(), reader.ReadSingle(), reader.ReadSingle());
             Quaternion rotation = new Quaternion(reader.ReadSingle(), reader.ReadSingle(), reader.ReadSingle(), reader.ReadSingle());
-            Color color = new Color(reader.ReadSingle(), reader.ReadSingle(), reader.ReadSingle());           
+            Color color = new Color(reader.ReadSingle(), reader.ReadSingle(), reader.ReadSingle());
+            Vector3 scale = new Vector3(reader.ReadSingle(), reader.ReadSingle(), reader.ReadSingle());
 
-            if(m_prefabs.Length > (int)type)
+
+            if (m_prefabs.Length > (int)type)
             {
                 GameObject go = Instantiate<GameObject>(m_prefabs[(int)type], m_parent);
                 go.transform.position = pos;
                 go.transform.rotation = rotation;
+                go.transform.localScale = scale;
 
                 SelecatableCheezein cheez = go.GetComponent<SelecatableCheezein>();
                 if(cheez != null)

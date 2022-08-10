@@ -12,6 +12,7 @@ public class SelecatableCheezein : MonoBehaviour
     public bool m_canRotate;
     public MeshRenderer m_mainMesh;
     public Material m_mainMaterial;
+    public int m_materialIndex = 0;
     // Protected //
     // Private //
     // Access //
@@ -19,7 +20,7 @@ public class SelecatableCheezein : MonoBehaviour
     {
         Cake,
         Cherry,
-        ChocoChips,
+        Cream,
         CreamBalls01,
         CreamBalls02,
         CreamBalls03,
@@ -32,7 +33,7 @@ public class SelecatableCheezein : MonoBehaviour
 
     public virtual void Start()
     {
-        m_mainMaterial = m_mainMesh.material;
+        m_mainMaterial = m_mainMesh.materials[m_materialIndex];
     }
 
     public void Select(bool set)
